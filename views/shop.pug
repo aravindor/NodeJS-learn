@@ -1,0 +1,30 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{title}
+        link(rel="stylesheet", href="/css/main.css")
+        link(rel="stylesheet", href="/css/product.js")
+    body 
+        header.main-header
+            nav.main-header__nav
+                ul.main-header__item-list
+                    li.main-header__item
+                        a.active(href="/") Shop 
+                ul.main-header__item-list
+                    li.main-header__item
+                        a(href="/admin/product-create") Create product
+        main 
+            .grid 
+                each product in prods
+                    article.card.product-item 
+                        header.card__header
+                            h1.product__title #{product.title}
+                        .card__image
+                            img(src="https://img.freepik.com/free-photo/book-composition-with-open-book_23-2147690555.jpg?size=626&ext=jpg&ga=GA1.1.1826414947.1700524800&semt=sph", alt="", srcset="")
+                        .card__content 
+                            h2.product___price #{product.price}
+                            p.product__description #{product.description} 
+                        .card__actions
+                            button.btn add to cart
