@@ -1,4 +1,4 @@
-extend layouts/main-layout.pug
+extend ../layouts/main-layout.pug
 
 block style 
     link(rel="stylesheet", href="/css/main.css")
@@ -10,6 +10,12 @@ block content
         .form-control
           label(for="name") Product name
           input(type="text" name="name" id="name")
+        .form-control
+          label(for="price") Product price
+          input(type="text" name="price" id="price")
+        .form-control
+          label(for="description") Product description
+          input(type="text" name="description" id="description")
 
         button(type="submit") Create product
 
